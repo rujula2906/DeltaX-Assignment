@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Add New Lead</h3>
+
+<form method="POST">
+    <input type="text" name="name" class="form-control mb-2" placeholder="Name" required>
+    <input type="text" name="phone" class="form-control mb-2" placeholder="Phone" required>
+    <input type="email" name="email" class="form-control mb-2" placeholder="Email">
+    <input type="text" name="source" class="form-control mb-2" placeholder="Source">
+
+    <select name="status" class="form-control mb-2">
+        <option>New</option>
+        <option>Contacted</option>
+        <option>Not Interested</option>
+    </select>
+
+    <textarea name="notes" class="form-control mb-2" placeholder="Notes"></textarea>
+<div class="mb-3">
+    <label class="form-label">Follow-Up Date</label>
+    <input type="date" name="follow_up_date" class="form-control">
+</div>
+    <button type="submit" class="btn btn-success">Save Lead</button>
+</form>
+
+{% endblock %}
